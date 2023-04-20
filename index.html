@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Profile</title>
+    <link rel="shortcut icon" href="" type="image/png">
+    <!----- Bootstrap 4.6.2 ----->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="bg bg2"></div>
+    <div class="bg bg3"></div>
+    <div class="main-content animation">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col media picture">
+                <div title="Ảnh đại diện"><img class="image rounded-circle" src="avatar.jpg" alt="Ảnh người dùng"></div>
+                <div class="middle">
+                    <img class="image-middle" src="avatar_hover.jpg" alt="Ảnh người dùng">
+                </div>
+            </div>
+            <div class="col"></div>
+        </div>
+        <h2 class="text-center">Master Minh</h2>
+        <div class="content text-center">
+            Anh lập trình viên với đam mê làm web!
+        </div>
+        <footer class="site-footer">
+            <div>
+                <ul class="social-icons">
+                    <li><a class="facebook" href="#" onclick="myFunction0()" title="facebook"><i
+                                class="fa fa-facebook"></i></a></li>
+                    <li><a class="phone" href="#" onclick="myFunction1()" title="Số điện thoại"><i
+                                class="fa fa-phone-alt"></i></a></li>
+                    <li><a class="email" href="#" onclick="myFunction2()" title="Hộp thư điện tử"><i
+                                class="fa fa-envelope"></i></a></li>
+                    <li><a class="github" href="#" onclick="myFunction3()" title="GitHub"><i
+                                class="fa fa-github"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+        <p id="info" class="text-center"></p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function myFunction0() {
+            document.getElementById("info").innerHTML = "<div class='alert alert-success'><a id='link' href='https://www.facebook.com/profile.php?id=100009762091194' target='_blank'> <b>Facebook: Minh Master</b> </a> </div>";
+        }
+        function myFunction1() {
+            document.getElementById("info").innerHTML = "<div class='alert alert-success'> <b>Số điện thoại: 0767922149</b> </div>";
+        }
+        function myFunction2() {
+            document.getElementById("info").innerHTML = "<div class='alert alert-success'> <b>E-Mail: tranleminh106@gmail.com</b> </div>";
+        }
+        function myFunction3() {
+            document.getElementById("info").innerHTML = "<div class='alert alert-success'> <b>Chưa cập nhật!</b> </div>";
+        }
+        // Lấy đối tượng
+        const animation = document.querySelector(".animation");
+        // Kích hoạt animation
+        animation.classList.add('animate__animated', 'animate__slideInTop');
+    </script>
+</body>
+
+</html>
