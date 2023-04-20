@@ -239,14 +239,6 @@ a#link{
   background-color: black;
 }
 
-.social-icons a.phone:hover {
-  background-color: #089c19;
-}
-
-.social-icons a.email:hover {
-  background-color: #007bb6;
-}
-
 .social-icons a.github:hover {
   background-color: #9f9f9f;
 }
