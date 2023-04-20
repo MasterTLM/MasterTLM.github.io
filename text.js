@@ -8,7 +8,7 @@
             document.getElementById("info").innerHTML = "<div class='alert alert-success'> <b>E-Mail: tranleminh106@gmail.com</b> </div>";
         }
         function myFunction3() {
-            document.getElementById("info").innerHTML = "<div class='alert alert-success'> <a id='link' href='https://mastertlm.github.io/' target='_blank'><b>GitHub: MasterTLM</b> </div>";
+            document.getElementById("info").innerHTML = "<div class='alert alert-success'> <a id='link' href='https://github.com/MasterTLM' target='_blank'><b>GitHub: MasterTLM</b> </div>";
         }
         // Lấy đối tượng
         const animation = document.querySelector(".animation");
