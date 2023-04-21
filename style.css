@@ -70,6 +70,12 @@ body {
   }
 }
 
+a#story:active,
+a#story:focus,
+a#story:hover{
+  background-color: rgb(168, 167, 167);
+}
+
 .image {
   opacity: 1;
   display: block;

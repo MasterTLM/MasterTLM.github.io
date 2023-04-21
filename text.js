@@ -1,3 +1,6 @@
+function myFunction() {
+        document.getElementById("info").innerHTML = "Học lập trình từ 10/10/2020";
+}
 function myFunction1() {
         document.getElementById("info").innerHTML = "<div class='alert alert-success'><a id='link' href='https://www.facebook.com/profile.php?id=100009762091194' target='_blank'> <b>Facebook: Minh Master</b> </a> </div>";
 }
