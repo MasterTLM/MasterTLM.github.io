@@ -70,6 +70,10 @@ body {
   }
 }
 
+a#story{
+  margin-bottom: 5px;
+}
+
 a#story:active,
 a#story:focus,
 a#story:hover{
