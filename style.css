@@ -84,10 +84,9 @@ body {
   transition: .5s ease;
   opacity: 0;
   position: absolute;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -100%);
+  -ms-transform: translate(-50%, -100%);
   text-align: center;
 }
 
@@ -101,11 +100,11 @@ body {
   padding: 5px;
 }
 
-.picture:hover .image {
+.image:hover {
   opacity: 0.3;
 }
 
-.picture:hover .middle {
+.middle:hover {
   opacity: 1;
 }
 
