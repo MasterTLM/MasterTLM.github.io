@@ -1,5 +1,8 @@
 function myFunction() {
-        document.getElementById("info").innerHTML = "Học lập trình từ 10/10/2020";
+        document.getElementById("onmouse").innerHTML = "Học lập trình từ 10/10/2020";
+}
+function outFunction() {
+        document.getElementById("onmouse").innerHTML = "";
 }
 function myFunction1() {
         document.getElementById("info").innerHTML = "<div class='alert alert-success'><a id='link' href='https://www.facebook.com/profile.php?id=100009762091194' target='_blank'> <b>Facebook: Minh Master</b> </a> </div>";
@@ -17,3 +20,5 @@ function myFunction4() {
    const animation = document.querySelector(".animation");
 // Kích hoạt animation
    animation.classList.add('animate__animated', 'animate__slideInTop');
+   
+// <a id='link' href='mailto:tranleminh106@gmail.com' target='_blank'>
