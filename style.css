@@ -69,16 +69,63 @@ body {
     transform: translateY(0);
   }
 }
-
-p.story{
-  margin-left: 111px;
-  margin-right: 111px;
-  margin-bottom: 5px;
-  border: 1px solid;
-  border-radius: 30px ;
-  background-color: rgb(204, 255, 0);
-  transform: translateY(-65%);
+/* Avatar */
+img.avatar {
+	flex-shrink: 0;
+	margin: 20px;
+	height: calc(150px + 3vw);
+	width: calc(150px + 3vw);
+	border: calc(8px + 0.1vw) solid transparent;
+	background-origin: border-box;
+	background-clip: content-box, border-box;
+	background-size: cover;
+	box-sizing: border-box;
+	box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+  --img-url: url(image/avatar.jpg);
 }
+
+img.avatars {
+	border-radius: 50%;
+	background-image: var(--img-url), linear-gradient(-60deg, #6c3 50%, #09f);
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 220px;
+  height: 220px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  padding: 5px;
+}
+
+/* .middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  -ms-transform: translate(-50%, -100%);
+  text-align: center;
+}
+
+.image-middle {
+  opacity: 1;
+  display: block;
+  width: 220px;
+  height: 220px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  padding: 5px;
+}
+
+.image:hover {
+  opacity: 0.3;
+}
+
+.middle:hover {
+  opacity: 1;
+} */
 
 /* Hover H2 */
 .wrapper{
@@ -169,43 +216,6 @@ a.before:hover:before,a.after:hover:after{
 }
 /* End Hover H2 */
 
-.image {
-  opacity: 1;
-  display: block;
-  width: 220px;
-  height: 220px;
-  transition: .5s ease;
-  backface-visibility: hidden;
-  padding: 5px;
-}
-
-.middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, -100%);
-  -ms-transform: translate(-50%, -100%);
-  text-align: center;
-}
-
-.image-middle {
-  opacity: 1;
-  display: block;
-  width: 220px;
-  height: 220px;
-  transition: .5s ease;
-  backface-visibility: hidden;
-  padding: 5px;
-}
-
-.image:hover {
-  opacity: 0.3;
-}
-
-.middle:hover {
-  opacity: 1;
-}
 
 .content {
   padding: 5px;
