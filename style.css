@@ -45,7 +45,7 @@ body {
   max-width: 500px;
   margin: auto;
   padding: 20px;
-  background-color: #FFF5EE;
+  background-color: #F0FFF0;
   box-shadow: 5px 10px 18px #888888;
 }
 
@@ -128,7 +128,7 @@ img.avatars {
 } */
 
 /* Hover H2 */
-.wrapper{
+/* .wrapper{
   margin:1em;
 }
 
@@ -213,7 +213,7 @@ a.before:hover:before,a.after:hover:after{
 }
 .square:hover a:before,.square:hover a:after{
   width:100%;
-}
+} */
 /* End Hover H2 */
 
 
