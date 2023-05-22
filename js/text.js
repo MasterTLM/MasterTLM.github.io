@@ -6,27 +6,15 @@ function outFunction() {
 }
 function myFunction1() {
         document.getElementById("info").innerHTML = "<div class='alert alert-success'><a id='link' href='https://www.facebook.com/profile.php?id=100009762091194' target='_blank'> <b>Facebook: Minh Master</b> </a> </div>";
-        let text = "Đây là Facebook của tôi";
-        let utterance = new SpeechSynthesisUtterance(text)
-        speechSynthesis.speak(utterance);
 }
 function myFunction2() {
         document.getElementById("info").innerHTML = "<div class='alert alert-success'><a id='link' href='https://www.youtube.com/channel/UCCVIeKy92nAU8cb3z9dfjOA' target='_blank'> <b>Youtube: Funny Channel</b> </a> </div>";
-        let text = "Đây là Youtube của tôi";
-        let utterance = new SpeechSynthesisUtterance(text)
-        speechSynthesis.speak(utterance);
 }
 function myFunction3() {
         document.getElementById("info").innerHTML = "<div class='alert alert-success'><a id='link' href='https://vm.tiktok.com/ZMYvefdQG/' target='_blank'> <b>Tiktok: Minh Master</b> </a> </div>";
-        let text = "Đây là Tiktok của tôi";
-        let utterance = new SpeechSynthesisUtterance(text)
-        speechSynthesis.speak(utterance);
 }
 function myFunction4() {
         document.getElementById("info").innerHTML = "<div class='alert alert-success'> <a id='link' href='https://github.com/MasterTLM' target='_blank'><b>GitHub: MasterTLM</b> </div>";
-        let text = "Đây là GitHub của tôi";
-        let utterance = new SpeechSynthesisUtterance(text)
-        speechSynthesis.speak(utterance);
 }
 // Lấy đối tượng
    const animation = document.querySelector(".animation");
