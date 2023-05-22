@@ -156,7 +156,7 @@ iframe {
   margin: 0 auto;
 }
 
-.container-login100 {
+.container-100 {
   width: 100%;  
   min-height: 100vh;
   display: -webkit-box;
@@ -175,7 +175,7 @@ iframe {
   background: linear-gradient(-135deg, #c850c0, #4158d0);
 }
 
-.wrap-login100 {
+.wrap-100 {
   width: 960px;
   background: #fff;
   border-radius: 10px;
@@ -193,23 +193,23 @@ iframe {
 
 /*------------------------------------------------------------------
 [  ]*/
-.login100-pic {
+.pic-100 {
   width: 316px;
 }
 
-.login100-pic img {
+.pic-100 img {
   max-width: 100%;
 }
 
 
 /*------------------------------------------------------------------
 [  ]*/
-.login100-form {
+.form-100 {
   width: 290px;
 }
 
 
-.login100-form-title {
+.form-title {
   font-family: Poppins-Bold;
   font-size: 40px;
   color: #333333;
@@ -474,16 +474,16 @@ a{
   text-decoration: none;
 }
 
+/* Avatar */
 .pic img{
-  margin: auto;
   max-width: 100%;
   margin-top: -90px; 
   margin-bottom: 30px; 
   border-radius: 10px;
   transform: translate(93%, 0%);
+  transition-duration: 0.6s;
 }
 
-/* Avatar */
 img.avatar {
 	flex-shrink: 0;
 	height: calc(150px + 3vw);
@@ -503,12 +503,6 @@ img.avatars {
 }
 
 .image {
-  opacity: 1;
-  display: block;
-  width: 220px;
-  height: 220px;
-  transition: .5s ease;
-  backface-visibility: hidden;
   padding: 5px;
 }
 
@@ -525,15 +519,15 @@ img.avatars {
 
 
 @media (max-width: 992px) {
-  .wrap-login100 {
+  .wrap-100 {
     padding: 177px 90px 33px 85px;
   }
 
-  .login100-pic {
+  .pic-100 {
     width: 35%;
   }
 
-  .login100-form {
+  .form-100 {
     width: 50%;
   }
 
@@ -548,21 +542,21 @@ img.avatars {
 }
 
 @media (max-width: 768px) {
-  .wrap-login100 {
+  .wrap-100 {
     padding: 100px 80px 33px 80px;
   }
 
-  .login100-pic {
+  .pic-100 {
     display: none;
   }
 
-  .login100-form {
+  .form-100 {
     width: 100%;
   }
 }
 
-@media (min-width: 768px){
-  .login100-form {
+@media (min-width: 768px){ /*------ 635px -----*/
+  .form-100 {
     margin-top: -120px;
   }
   .pic {
@@ -571,7 +565,21 @@ img.avatars {
 }
 
 @media (max-width: 576px) {
-  .wrap-login100 {
+  .wrap-100 {
     padding: 100px 15px 33px 15px;
   }
+}
+
+/*[ End Responsive ]
+------------------------------------------------------------------*/
+
+
+
+.pic>img:hover{
+margin-top: -120px ;
+margin-bottom: -200px ;
+margin-left: 142px;
+transform: scale(3,3);
+transition-duration: 0.6s;
+visibility: visible;
 }

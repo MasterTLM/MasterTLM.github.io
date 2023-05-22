@@ -16,9 +16,9 @@ function myFunction3() {
 function myFunction4() {
         document.getElementById("info").innerHTML = "<div class='alert alert-success'> <a id='link' href='https://github.com/MasterTLM' target='_blank'><b>GitHub: MasterTLM</b> </div>";
 }
-// Lấy đối tượng
-   const animation = document.querySelector(".animation");
-// Kích hoạt animation
-   animation.classList.add('animate__animated', 'animate__slideInTop');
+// // Lấy đối tượng
+//    const animation = document.querySelector(".animation");
+// // Kích hoạt animation
+//    animation.classList.add('animate__animated', 'animate__slideInTop');
    
 // <a id='link' href='mailto:tranleminh106@gmail.com' target='_blank'>
