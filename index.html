@@ -15,7 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
 <!--===============================================================================================-->
 
-    <link rel="stylesheet" type="text/css" href="css/form.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 <!--===============================================================================================-->
 </head>
@@ -34,7 +34,7 @@
 					<strong class="form-title">
 						Master Minh
                     </strong>
-                    <div class="text-center" style="margin-top: -30px;">
+                    <div class="text-center" style="margin-top: -30px; font-family: math;">
                         Anh lập trình viên với đam mê làm web!
                     </div>
                     <br>
@@ -46,13 +46,13 @@
                     <br>
                     <div class="text-center">
                         <div class="info">
-                            <span class="icon1" onclick="myFunction1()"><i class="fa-brands fa-facebook"></i></span>
-                            <span class="icon2" onclick="myFunction2()"><i class="fa-brands fa-youtube"></i></a></span>
-                            <span class="icon3" onclick="myFunction3()"><i class="fa-brands fa-tiktok"></i></span>
-                            <span class="icon4" onclick="myFunction4()"><i class="fa-brands fa-github"></i></span>
+                            <span class="icon1" onclick="toggleDiv('myFunction1')"><i class="fa-brands fa-facebook"></i></span>
+                            <span class="icon2" onclick="toggleDiv('myFunction2')"><i class="fa-brands fa-youtube"></i></a></span>
+                            <span class="icon3" onclick="toggleDiv('myFunction3')"><i class="fa-brands fa-tiktok"></i></span>
+                            <span class="icon4" onclick="toggleDiv('myFunction4')"><i class="fa-brands fa-github"></i></span>
                         </div>
                     </div>    
-                    <p id="info" class="text-center" style="margin-top: 20px;"></p>
+                    <p id="info" class="text-center" style="margin-top: 20px;display: none"></p>
 				</div>
 			</div>
 		</div>
@@ -71,8 +71,7 @@
 		})
 	</script>
 <!--===============================================================================================-->
-	<script src="js/main.js"></script>
-    <script src="js/text.js"></script>
+    <script src="js/main.js"></script>
 <!--===============================================================================================-->
 </body>
 </html>
