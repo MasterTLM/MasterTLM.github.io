@@ -67,7 +67,7 @@ function toggleDiv(functionName) {
 const boxes = document.querySelectorAll(".wrap-100");
 
 const checkBoxes = () => {
-  const triggerBottom = (window.innerHeight / 5) * 4;
+  const triggerBottom = (window.innerHeight / 10) * 9;
   boxes.forEach((box) => {
     const boxTop = box.getBoundingClientRect().top;
     if (boxTop < triggerBottom) box.classList.add("show");

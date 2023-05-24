@@ -178,7 +178,7 @@ iframe {
   background: linear-gradient(-135deg, #c850c0, #4158d0);
 }
 
-.wrap {
+.page {
   justify-content: center !important;
   padding: 50px 0 !important;
 }
@@ -197,12 +197,13 @@ iframe {
   justify-content: space-between;
   padding: 177px 130px 33px 95px;
     /* Show */
-  transform: translateX(200%);
-  transition: transform 0.4s ease;
+  opacity: 0;
+  transition: opacity 1s ease-out;
 }
 
 .wrap-100.show {
-  transform: translateX(0);
+  transition: opacity 1.5s ease-out;
+    opacity: 1;
 }
 
 /*------------------------------------------------------------------
@@ -519,18 +520,18 @@ img.avatars {
   padding: 3px;
 }
 
-.introduce{
+.part{
   border: 2px solid #ccc;
   border-radius: 20px;
   transition-duration: 0.6s;
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 20px;
-  animation: 1s ease-out 0s 1 introduce;
+  animation: 1s ease-out 0s 1 part;
   margin: 20px 8px 10px 8px;
 }
 
-@keyframes introduce {
+@keyframes part {
   0% {
     transform: translateX(-100%);
     opacity: 0;
@@ -555,7 +556,6 @@ img.avatars {
   margin-bottom: -100px;
   transform: scale(6, 6);
   transition-duration: 1s;
-  visibility: visible;
 }
 
 .custom-btn{
@@ -651,7 +651,7 @@ img.avatars {
     width: 100%;
   }
 
-  .introduce{
+  .part{
     text-align: center;
     border: 2px solid #ccc;
     border-radius: 20px;
