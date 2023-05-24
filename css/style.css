@@ -179,8 +179,6 @@ iframe {
 }
 
 .wrap {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center !important;
   padding: 50px 0 !important;
 }
@@ -201,10 +199,6 @@ iframe {
     /* Show */
   transform: translateX(200%);
   transition: transform 0.4s ease;
-}
-
-.wrap-100:nth-of-type(even) {
-  transform: translateX(-100%);
 }
 
 .wrap-100.show {
@@ -505,8 +499,8 @@ a{
 
 img.avatar {
 	flex-shrink: 0;
-	height: calc(150px + 3vw);
-	width: calc(150px + 3vw);
+	height: calc(160px + 3vw);
+	width: calc(160px + 3vw);
 	border: calc(8px + 0.1vw) solid transparent;
 	background-origin: border-box;
 	background-clip: content-box, border-box;
@@ -557,8 +551,8 @@ img.avatars {
 }
 
 .pic>img:hover{
-  margin: -120px 0 -400px 160px;
-  transform: scale(5.5,5.5);
+  margin: 18vh 0 -10vh 14vh;
+  transform: scale(6, 6);
   transition-duration: 0.6s;
   visibility: visible;
 }
