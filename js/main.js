@@ -63,3 +63,17 @@ function toggleDiv(functionName) {
 //    animation.classList.add('animate__animated', 'animate__slideInTop');
    
 // <a id='link' href='mailto:tranleminh106@gmail.com' target='_blank'>
+
+const boxes = document.querySelectorAll(".wrap-100");
+
+const checkBoxes = () => {
+  const triggerBottom = (window.innerHeight / 5) * 4;
+  boxes.forEach((box) => {
+    const boxTop = box.getBoundingClientRect().top;
+    if (boxTop < triggerBottom) box.classList.add("show");
+    else box.classList.remove("show");
+  });
+};
+
+window.addEventListener("scroll", checkBoxes);
+checkBoxes();

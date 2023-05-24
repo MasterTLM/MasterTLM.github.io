@@ -3,75 +3,107 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Profile</title>
     <link rel="shortcut icon" href="image-preventive/icons/favicon.ico" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap-5.3.0-alpha3-dist/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->	
-	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/util.css">
-<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <!--===============================================================================================-->
+    <script src="js/quote.js" defer></script>
+    <!--===============================================================================================-->
 </head>
+
 <body>
-<div class="limiter">
-		<div class="container-100">
-			<div class="wrap-100 slide">
-				<div class="pic-100 js-tilt" data-tilt >
-					<img src="image/avatar_hover.jpg" alt="IMG" style="margin-top: -145px; border-radius: 10px">
-				</div>
-                
-				<div class="form-100">
-                    <div class="pic" >
+    <div class="limiter">
+        <div class="container-100">
+            <div class="wrap-100 slide">
+                <div class="pic-100 js-tilt" data-tilt>
+                    <img src="image/avatar_hover.jpg" alt="IMG" style="margin-top: -145px; border-radius: 10px">
+                </div>
+
+                <div class="form-100">
+                    <div class="pic">
                         <img class="image avatar avatars" src="image/avatar.jpg" alt="IMG">
                     </div>
-					<strong class="form-title">
-						Master Minh
+                    <strong class="form-title">
+                        Master Minh
                     </strong>
                     <div class="text-center" style="font-size: 22px; font-family: serif; margin-top: -40px;">
-					- Web Developer -
+                        - Web Developer -
                     </div>
                     <br>
-                    <div class="introduce">
-                        <strong class="intro" style="color: #e22bc8;">Giới thiệu</strong>
-                        <li>&hearts; Học lập trình từ ngày 10-10-2020</li>
-                        <li>&hearts; Đang học tại Trường CNTT & TT</li>
-                    </div>
+                    <div class="text-center" style="font-size: 18px;">Anh lập trình viên đam mê làm web</div>
                     <br>
-                    <div class="text-center">
+                    <div class="text-center" style="margin-top: 50px;">
                         <div class="info">
                             <span class="icon1" onclick="toggleDiv('myFunction1')"><i class="fa-brands fa-facebook"></i></span>
                             <span class="icon2" onclick="toggleDiv('myFunction2')"><i class="fa-brands fa-youtube"></i></a></span>
                             <span class="icon3" onclick="toggleDiv('myFunction3')"><i class="fa-brands fa-tiktok"></i></span>
                             <span class="icon4" onclick="toggleDiv('myFunction4')"><i class="fa-brands fa-github"></i></span>
                         </div>
-                    </div>    
+                    </div>
                     <p id="info" class="text-center" style="margin-top: 20px;display: none"></p>
-				</div>
-			</div>
-		</div>
-	</div>
-<!--===============================================================================================-->	
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
-<!--===============================================================================================-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="limiter">
+        <div class="container-100">
+            <div class="wrap wrap-100">
+                <div>
+                    <strong class="form-title">
+                        Master Minh
+                    </strong>
+                    <div class="text-center" style="font-size: 22px; font-family: serif; margin-top: -40px;">
+                        - Web Developer -
+                    </div>
+                    <div class="introduce">
+                        <strong class="caption" style="color: #e22bc8;">Giới thiệu</strong>
+                        <ul>
+                            <li>&hearts; Học lập trình từ ngày 10-10-2020</li>
+                            <li>&hearts; Đang học tại <a href="https://www.facebook.com/CTU.dtn.cntttt"><strong>Trường CNTT & TT</strong></a> - <a href="https://www.facebook.com/CTUDHCT"><strong>Đai học Cần Thơ</strong></a></li>
+                        </ul>
+                    </div>
+                    <div class="introduce">
+                        <strong class="caption" style="color: #e22bc8;">Bạn cần một câu nói hay trong ngày</strong>
+                            <div class="text-center">
+                                <center><button class="custom-btn btn-quote" id="new-quote">Click Here!</button></center>
+
+                                <p id="quote"></p>
+                            </div>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--===============================================================================================-->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <!--===============================================================================================-->
     <script type="text/javascript" src="js/bootstrap-5.3.0-alpha3-dist/bootstrap.bundle.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/tilt/tilt.jquery.min.js"></script>
-	<script >
-		$('.js-tilt').tilt({
-			scale: 1.1
-		})
-	</script>
-<!--===============================================================================================-->
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/tilt/tilt.jquery.min.js"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+    <!--===============================================================================================-->
     <script src="js/main.js"></script>
-<!--===============================================================================================-->
+    <!--===============================================================================================-->
 </body>
+
 </html>
