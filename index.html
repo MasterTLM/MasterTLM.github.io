@@ -37,13 +37,13 @@
                     <strong class="form-title">
                         Master Minh
                     </strong>
-                    <div class="text-center" style="font-size: 22px; font-family: serif; margin-top: -40px;">
+                    <div class="text-center" style="font-size: 20px; font-family: serif; margin-top: -40px;">
                         - Web Developer -
                     </div>
                     <br>
-                    <div class="text-center" style="font-size: 18px;">Anh lập trình viên đam mê làm web</div>
+                    <div class="text-center" style="font-size: 15px;">Anh lập trình viên đam mê làm web</div>
                     <br>
-                    <div class="text-center" style="margin-top: 50px;">
+                    <div class="text-center">
                         <div class="info">
                             <span class="icon1" onclick="toggleDiv('myFunction1')"><i class="fa-brands fa-facebook"></i></span>
                             <span class="icon2" onclick="toggleDiv('myFunction2')"><i class="fa-brands fa-youtube"></i></a></span>
@@ -99,7 +99,17 @@
     </script>
     <!--===============================================================================================-->
     <script src="js/main.js"></script>
-    <script src="js/quote.js" defer></script>
+    <script>
+        const button = document.querySelector("#new-quote");
+        const p = document.querySelector("#quote");
+        const API = "http://api.quotable.io/random";
+
+        button.addEventListener("click", () =>{
+                fetch(API).then(res => res.json()).then(data =>{
+                p.innerText = data.content; 
+            }).catch(() => alert("Error fetching quote!"));
+        });
+    </script>
     <!--===============================================================================================-->
 </body>
 
