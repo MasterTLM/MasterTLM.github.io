@@ -1,16 +1,16 @@
-window.onload = function () {
-    var urlParams = new URLSearchParams(window.location.search);
-    var isAdmin = urlParams.get('isAdmin');
+// window.onload = function () {
+//     var urlParams = new URLSearchParams(window.location.search);
+//     var isAdmin = urlParams.get('isAdmin');
   
-    if (isAdmin === 'true') {
-      // Người dùng hiện tại có quyền admin
-      console.log('Người dùng hiện tại đã có quyền admin');
-    } else {
-      // Người dùng hiện tại không có quyền admin
-      console.log('Người dùng hiện tại không có quyền admin');
-      window.location.href = 'https://mastertlm.github.io/'; // Chuyển hướng đến trang đăng nhập nếu không có quyền admin
-    }
-};
+//     if (isAdmin === 'true') {
+//       // Người dùng hiện tại có quyền admin
+
+//     } else {
+//       // Người dùng hiện tại không có quyền admin
+
+//       window.location.href = 'https://mastertlm.github.io/'; // Chuyển hướng đến trang đăng nhập nếu không có quyền admin
+//     }
+// };
   
 $(document).ready(function() {
     var windowHeight = $(window).height();
