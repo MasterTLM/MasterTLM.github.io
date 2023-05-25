@@ -160,10 +160,12 @@
             if (username.value == obj.owner[0].username && password.value == obj.owner[0].password) {
               // Cấp quyền admin và lưu thông tin vào JSON
               isAdmin.value = 'true';
+              obj.owner[0].isAdmin = true;
           
-              window.location.href = 'owner.html?isAdmin=' + isAdmin.value;
+              window.location.href = 'https://mastertlm.github.io/owner.html?isAdmin=' + isAdmin.value;
             } else {
-              alert('Sai username hoặc password!');
+              alert('Lỗi! Sai Tài khoản hoặc Mật khẩu');
+              window.location.reload;
             }
           }          
     </script>
