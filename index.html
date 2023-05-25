@@ -111,7 +111,7 @@
                                 <i class="far fa-eye"></i>
                             </div>
                         </div>
-                        <input type="hidden" id="isAdmin" name="isAdmin" value="false">
+                        <!-- <input type="hidden" id="isAdmin" name="isAdmin" value="false"> -->
                         <button type="onsubmit" class="form-submit">Đăng nhập</button>
                     </form>
                 </div>
@@ -155,12 +155,12 @@
             var frm = document.forms['login'];
             var username = frm.username;
             var password = frm.password;
-            var isAdmin = frm.isAdmin;
+            <!-- var isAdmin = frm.isAdmin; -->
           
             if (username.value == obj.owner[0].username && password.value == obj.owner[0].password) {
               // Cấp quyền admin và lưu thông tin vào JSON
-              isAdmin.value = 'true';
-              obj.owner[0].isAdmin = true;
+                isAdmin.value = 'true';
+                obj.owner[0].isAdmin = true;
           
               window.location.href = 'https://mastertlm.github.io/owner.html?isAdmin=' + isAdmin.value;
             } else {

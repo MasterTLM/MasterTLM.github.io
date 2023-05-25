@@ -133,21 +133,5 @@
     <!--===============================================================================================-->
     <script src="js/owner.js"></script>
     <!--===============================================================================================-->
-    <script>
-        window.onload = function () {
-            var urlParams = new URLSearchParams(window.location.search);
-            var isAdmin = urlParams.get('isAdmin');
-          
-            if (isAdmin === 'true') {
-              // Người dùng hiện tại có quyền admin
-              console.log('Người dùng hiện tại đã có quyền admin');
-            } else {
-              // Người dùng hiện tại không có quyền admin
-              console.log('Người dùng hiện tại không có quyền admin');
-              window.location.href = 'index.html'; // Chuyển hướng đến trang đăng nhập nếu không có quyền admin
-            }
-          };
-          
-    </script>
 </body>
 </html>
