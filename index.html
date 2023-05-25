@@ -98,20 +98,21 @@
                         Master Minh
                     </strong>
                 <div id="wrapper">
-                    <form action="" id="form-login">
+                    <form name="login" id="form-login" method="POST" onsubmit="return frmValidate()">>
                         <div class="form-heading"><img class="rounded-5" src="image/logo.png" alt="Logo" style="width:100px; height: 100px;"></div>
                         <div class="form-group">
                             <i class="far fa-user"></i>
-                            <input type="text" class="form-input" placeholder="Tên đăng nhập">
+                            <input type="text" class="form-input" name="username" placeholder="Tên đăng nhập">
                         </div>
                         <div class="form-group">
                             <i class="fas fa-key"></i>
-                            <input type="password" class="form-input" placeholder="Mật khẩu">
+                            <input type="password" class="form-input" name="password" placeholder="Mật khẩu">
                             <div id="eye" style="margin-left: -55px;">
                                 <i class="far fa-eye"></i>
                             </div>
                         </div>
-                        <input type="submit" value="Đăng nhập" class="form-submit">
+                        <input type="hidden" id="isAdmin" name="isAdmin" value="false">
+                        <button type="onsubmit" class="form-submit">Đăng nhập</button>
                     </form>
                 </div>
             </div>
@@ -128,12 +129,12 @@
     <script>
         $('.js-tilt').tilt({
             scale: 1.1
-        })
+        });
     </script>
     <!--===============================================================================================-->
     <script src="js/main.js"></script>
     <script src="js/quote.js"></script>
-    <!--===============================================================================================-->
+    <!--===================================== ĐĂNG NHẬP ==============================================-->
     <script>
         $(document).ready(function(){
             $('#eye').click(function(){
@@ -146,6 +147,25 @@
                 }
             });
         });
+    </script>
+    <script>
+        var account = '{"owner":[{"username":"tranleminh106","password":"1234"}]}';
+        var obj = JSON.parse(account);
+        function frmValidate() {
+            var frm = document.forms['login'];
+            var username = frm.username;
+            var password = frm.password;
+            var isAdmin = frm.isAdmin;
+          
+            if (username.value == obj.owner[0].username && password.value == obj.owner[0].password) {
+              // Cấp quyền admin và lưu thông tin vào JSON
+              isAdmin.value = 'true';
+          
+              window.location.href = 'owner.html?isAdmin=' + isAdmin.value;
+            } else {
+              alert('Sai username hoặc password!');
+            }
+          }          
     </script>
 </body>
 
