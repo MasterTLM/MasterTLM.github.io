@@ -1,0 +1,121 @@
+
+.music-player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.album-cover {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.album-cover img {
+    width: 100%;
+    height: 100%;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+button {
+    background-color: #1e88e5;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* Ẩn thanh trượt âm lượng ban đầu */
+.volume-bar {
+    display: none;
+  }
+  
+  /* Hiển thị thanh trượt âm lượng khi nút volume được nhấn */
+  .volume-bar.show {
+    display: block;
+  }
+  
+input[type="range"] {
+    width: 50%;
+}
+
+/* Thêm các định dạng CSS cho thư viện và danh sách bài hát */
+.library {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.song-list {
+    max-height: 200px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.song {
+    cursor: pointer;
+    padding: 5px;
+}
+
+.song:hover {
+    background-color: #f0f0f0;
+}
+
+/* Thêm các định dạng CSS cho hình ảnh bìa album */
+#cover {
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* Thêm các định dạng CSS cho thanh trượt */
+.seek-container {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seek-bar {
+    width: 100%;
+    height: 4px;
+    --appearance: none;
+    background-color: #ddd;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+.seek-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background-color: #4CAF50;
+    cursor: pointer}
+
+.time {
+    font-size: 14px;
+    color: #666;
+    margin-left: 10px;
+}

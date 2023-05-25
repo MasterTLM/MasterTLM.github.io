@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="css/owner.css">
+    <link rel="stylesheet" type="text/css" href="css/music.css">
     <!--===============================================================================================-->
 </head>
 <body>
@@ -52,6 +53,42 @@
         </div>
     </header>
 
+    <!--============================================ MUSIC PLAYER ===================================================-->
+    <section>
+        <div class="music-player">
+            <h1 id="title">Song title</h1>
+                    <div class="album-cover">
+                        <img src="image/music-start.jpg" alt="Album Cover" id="cover">
+                    </div>
+                    <audio id="audio"></audio>
+                    <!-- Thêm thanh trượt để điều chỉnh bài hát và hiển thị thời gian của bài hát -->
+                    <div class="seek-container">
+                        <input type="range" min="0" max="100" value="0" class="seek-bar">
+                        <span class="time">0:00 / 0:00</span>
+                    </div>
+                    <div class="controls">
+                        <button id="prev">Previous</button>
+                        <button id="play" onclick="playPause()">Play</button>
+                        <button id="next">Next</button>
+                        <button id="loop" onclick="toggleLoop()">Loop</button>
+
+                        <!-- Thêm nút volume và thanh trượt âm lượng -->
+                            <button class="volume-btn">Volume</button>
+                            <input id="volume" type="range" min="0" max="1" step="0.1" onchange="changeVolume()" value="1" class="volume-bar">
+                            <button id="autoplay">Autoplay: On</button>
+                    </div>
+
+                </div>
+                <div class="col-6 library">
+                    <h3>My Favorite</h3>
+                    <div class="song-list">
+                        <!-- Danh sách bài hát sẽ được thêm vào đây -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!--============================================ FOOTER ===================================================-->
     <footer class="site-footer">
         <div class="row">
@@ -72,5 +109,6 @@
     <!--===============================================================================================-->
     <script src="js/owner.js"></script>
     <!--===============================================================================================-->
+    <script src="js/music.js"></script>
 </body>
 </html>
