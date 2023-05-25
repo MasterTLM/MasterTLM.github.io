@@ -1,3 +1,4 @@
+//------------------------ Toas ---------------------------------------------
 document.getElementById("toastbtn").onclick = function() {
     var toastElList = [].slice.call(document.querySelectorAll('.toast'))
     var toastList = toastElList.map(function(toastEl) {
@@ -6,7 +7,7 @@ document.getElementById("toastbtn").onclick = function() {
     toastList.forEach(toast => toast.show()) 
   }  
 
-
+//---------------------GET API QOUTES-------------------------------
 const button = document.querySelector("#toastbtn");
 const p = document.querySelector("#quote");
 const strong = document.querySelector("#author");

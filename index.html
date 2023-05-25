@@ -56,6 +56,7 @@
             </div>
         </div>
     </div>
+    <!--======================================================= PAGE 1 ===========================================================-->
     <div class="limiter">
         <div class="container-100">
             <div class="page wrap-100">
@@ -91,6 +92,7 @@
             </div>
         </div>
     </div>
+    <!--======================================================= PAGE 2 ===========================================================-->
     <div class="limiter">
         <div class="container-100">
             <div class="page wrap-100">
@@ -98,7 +100,7 @@
                         Master Minh
                     </strong>
                 <div id="wrapper">
-                    <form name="login" id="form-login"  onsubmit="return frmValidate()"> <!--  method="POST" -->
+                    <form name="login" id="form-login"  onsubmit="return frmValidate()" method="POST">
                         <div class="form-heading"><img class="rounded-5" src="image/logo.png" alt="Logo" style="width:100px; height: 100px;"></div>
                         <div class="form-group">
                             <i class="far fa-user"></i>
@@ -119,6 +121,12 @@
         </div>
     </div>
     <!--===============================================================================================-->
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        });
+    </script>
+    <!--===============================================================================================-->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
     <!--===============================================================================================-->
     <script type="text/javascript" src="js/bootstrap-5.3.0-alpha3-dist/bootstrap.bundle.min.js"></script>
@@ -126,11 +134,6 @@
     <script src="vendor/select2/select2.min.js"></script>
     <!--===============================================================================================-->
     <script src="vendor/tilt/tilt.jquery.min.js"></script>
-    <script>
-        $('.js-tilt').tilt({
-            scale: 1.1
-        });
-    </script>
     <!--===============================================================================================-->
     <script src="js/main.js"></script>
     <script src="js/quote.js"></script>
@@ -155,14 +158,9 @@
             var frm = document.forms['login'];
             var username = frm.username;
             var password = frm.password;
-            <!-- var isAdmin = frm.isAdmin; -->
           
             if (username.value == obj.owner[0].username && password.value == obj.owner[0].password) {
-              // Cấp quyền admin và lưu thông tin vào JSON
-                isAdmin.value = 'true';
-                obj.owner[0].isAdmin = true;
-          
-              window.location.href = 'https://mastertlm.github.io/owner.html?isAdmin=' + isAdmin.value;
+              window.location.href = 'https://mastertlm.github.io/owner.html'
             } else {
               alert('Lỗi! Sai Tài khoản hoặc Mật khẩu');
               window.location.reload;

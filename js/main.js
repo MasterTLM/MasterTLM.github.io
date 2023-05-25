@@ -55,15 +55,10 @@ function toggleDiv(functionName) {
 		}
 	}
 }
-
-
-// // Lấy đối tượng
-//    const animation = document.querySelector(".animation");
-// // Kích hoạt animation
-//    animation.classList.add('animate__animated', 'animate__slideInTop');
-   
 // <a id='link' href='mailto:tranleminh106@gmail.com' target='_blank'>
 
+
+//-------------------- Hide Header ------------------------
 const boxes = document.querySelectorAll(".wrap-100");
 
 const checkBoxes = () => {
@@ -77,3 +72,25 @@ const checkBoxes = () => {
 
 window.addEventListener("scroll", checkBoxes);
 checkBoxes();
+
+
+//--------------------------Phân quyền ADMIN-----------------------------------
+// var account = '{"owner":[{"username":"tranleminh106","password":"1234"}]}';
+// var obj = JSON.parse(account);
+// function frmValidate() {
+// 	var frm = document.forms['login'];
+// 	var username = frm.username;
+// 	var password = frm.password;
+// 	<!-- var isAdmin = frm.isAdmin; -->
+  
+// 	if (username.value == obj.owner[0].username && password.value == obj.owner[0].password) {
+// 	  // Cấp quyền admin và lưu thông tin vào JSON
+// 		isAdmin.value = 'true';
+// 		obj.owner[0].isAdmin = true;
+  
+// 	  window.location.href = 'https://mastertlm.github.io/owner.html?isAdmin=' + isAdmin.value;
+// 	} else {
+// 	  alert('Lỗi! Sai Tài khoản hoặc Mật khẩu');
+// 	  window.location.reload;
+// 	}
+// }          

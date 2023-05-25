@@ -81,6 +81,13 @@ a.btn-target {
     .carousel{
         display: none !important;
     }
+    .info{
+        margin-top: 35px;
+    }
+    .img{
+        width: 100px !important;
+        height: 100px;
+    }    
 }
 
 @media only screen and (min-width: 600px) {
@@ -94,6 +101,17 @@ a.btn-target {
     border-radius: 5px;
 }
 
-header.hide{
-    position: inherit;
+.img{
+    width: 200px;
+    height: 200px;
 }
+
+        
+ul {
+    list-style-type: none;
+    margin-left: 0;
+    padding-right: 0;
+    display: inline-block;  }
+/* header.hide{
+    position: inherit;
+} */
