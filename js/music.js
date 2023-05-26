@@ -1,20 +1,20 @@
 // ------------------------------------------------- PLAY AND PAUSE------------------------------------------------------------
+const audio = document.getElementById("audio");
 function playPause() {
-    const audio = document.getElementById("audio");
     const playButton = document.getElementById("play");
     if (audio.paused) {
         audio.play();
-        playButton.innerText = "Pause";
+        playButton.innerHTML = "<img src='image/icons/pause.png'>";
     } else {
         audio.pause();
-        playButton.innerText = "Play";
+        playButton.innerHTML = "<img src='image/icons/play.png'>";
     }
 };
 // ------------------------------------------------- LOOP------------------------------------------------------------
 function toggleLoop() {
     const loopButton = document.getElementById("loop");
     audio.loop = !audio.loop;
-    loopButton.innerText = audio.loop ? "Unloop" : "Loop";
+    loopButton.innerHTML = audio.loop ? "<img src='image/icons/no-loop.png'>" : "<img src='image/icons/loop.png'>";
 };
 
 // ------------------------------------------------- VOLUME------------------------------------------------------------
@@ -45,13 +45,12 @@ function changeVolume() {
   // Kiểm tra giá trị của thanh trượt âm lượng
   if (volumeSlider.value == 0) {
     // Nếu giá trị là 0, đổi tên nút volume thành "Silent"
-    volumeBtn.textContent = "Mute";
+    volumeBtn.innerHTML = "<img src='image/icons/mute.png'>";
   } else {
     // Nếu giá trị khác 0, đổi tên nút volume thành "Volume"
-    volumeBtn.textContent = "Volume";
+    volumeBtn.innerHTML = "<img src='image/icons/volume.png'>";
   }
 }
-
 
 // ------------------------------------------------- MY FAVORITE------------------------------------------------------------
 // Thêm mảng chứa thông tin về các bài hát trong thư viện
@@ -61,9 +60,12 @@ const songs = [
     { title: "Run Free", src: "album/music/run-free.mp3", cover: "album/cover/run-free.jpg" },
     { title: "The River", src: "album/music/the-river.mp3", cover: "album/cover/the-river.jpg" },
 ];
-
+const playButton = document.getElementById("play");
 // Thêm các bài hát vào danh sách trong thư viện
 const songList = document.querySelector(".song-list");
+
+let currentSongIndex = -1;
+
 songs.forEach((song, index) => {
     const songElement = document.createElement("div");
     songElement.classList.add("song");
@@ -73,12 +75,14 @@ songs.forEach((song, index) => {
 });
 
 function playSong(index) {
+    const position = index;
     audio.src = songs[index].src;
     document.getElementById("cover").src = songs[index].cover;
     const titleElement = document.getElementById("title");
     titleElement.innerText = songs[index].title;
     audio.play();
-    playButton.innerText = "Pause";
+    playButton.innerHTML = "<img src='image/icons/pause.png'>";
+    currentSongIndex = index;
 };
 
 // ------------------------------------------------- PROGRESS-PERCENT AND TIME-UPDATE ------------------------------------------------------------
@@ -111,18 +115,6 @@ seekBar.addEventListener("input", () => {
 });
 
 // ------------------------------------------------- PREV và NEXT SONG ------------------------------------------------------------ 
-let currentSongIndex = 0;
-
-function updateCurrentSongIndex() {
-    const audio = document.querySelector('#audio');
-    if (audio.src) {
-      const currentSongSrc = audio.src;
-      const currentSong = songs.find(song => song.src === currentSongSrc);
-      currentSongIndex = songs.indexOf(currentSong);
-    } else {
-      currentSongIndex = 0;
-    }
-  }
 
 function nextSong() {
     currentSongIndex++;
@@ -137,7 +129,7 @@ function nextSong() {
     const title = document.querySelector('#title');
     title.textContent = nextSong.title;
     audio.play();
-    updateCurrentSongIndex();
+    playButton.innerHTML = "<img src='image/icons/pause.png'>";
   }
   
   function prevSong() {
@@ -153,8 +145,7 @@ function nextSong() {
     const title = document.querySelector('#title');
     title.textContent = prevSong.title;
     audio.play();
-    updateCurrentSongIndex();
-
+    playButton.innerHTML = "<img src='image/icons/pause.png'>";
   }
 
     const nextBtn = document.querySelector('#next');
