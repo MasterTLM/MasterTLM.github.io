@@ -58,17 +58,17 @@ function changeVolume() {
 // ------------------------------------------------- MY FAVORITE------------------------------------------------------------
 // Thêm mảng chứa thông tin về các bài hát trong thư viện
 const songs = [
+    { title: "Bật Tình Yêu Lên", singer:"Tăng Duy Tân, Hòa Minzy", src: "album/music/bat-tinh-yeu-len.mp3", cover: "album/cover/bat-tinh-yeu-len.jpg" },
     { title: "Cơn Mưa Ngang Qua", singer:"Sơn Tùng M-TP", src: "album/music/con-mua-ngang-qua.mp3", cover: "album/cover/con-mua-ngang-qua.jpg" },
     { title: "Way Back Home", singer:"Huy Vạc, Freak", src: "album/music/way-back-home.mp3", cover: "album/cover/way-back-home.jpg" },
+    { title: "Reality", singer:"Lost Frequencies, Janieck Devy", src: "album/music/reality.mp3", cover: "album/cover/reality.jpg" },
+    { title: "That Girl", singer:"Olly  Murs", src: "album/music/that-girl.mp3", cover: "album/cover/that-girl.jpg" },
+    { title: "On My Way", singer:"Alan Walker, Sabrina Carpenter, Farruko", src: "album/music/on-my-way.mp3", cover: "album/cover/on-my-way.jpg" },
     { title: "Run Free", singer:"Deep Chills, IVIE", src: "album/music/run-free.mp3", cover: "album/cover/run-free.jpg" },
     { title: "The River", singer:"Axel Johansson", src: "album/music/the-river.mp3", cover: "album/cover/the-river.jpg" },
     { title: "Alone", singer:"Alan Walker & Ava Max", src: "album/music/alone.mp3", cover: "album/cover/alone.jpg" },
-    { title: "Bật Tình Yêu Lên", singer:"Tăng Duy Tân, Hòa Minzy", src: "album/music/bat-tinh-yeu-len.mp3", cover: "album/cover/bat-tinh-yeu-len.jpg" },
     { title: "LiLy", singer:"Alan Walker, K-391, Emelie Hollow", src: "album/music/lily.mp3", cover: "album/cover/lily.jpg" },
     { title: "Lost Control", singer:"Alan Walker, Sorana", src: "album/music/lost-control.mp3", cover: "album/cover/lost-control.jfif" },
-    { title: "On My Way", singer:"Alan Walker, Sabrina Carpenter, Farruko", src: "album/music/on-my-way.mp3", cover: "album/cover/on-my-way.jpg" },
-    { title: "That Girl", singer:"Olly  Murs", src: "album/music/that-girl.mp3", cover: "album/cover/that-girl.jpg" },
-    { title: "Reality", singer:"Lost Frequencies, Janieck Devy", src: "album/music/reality.mp3", cover: "album/cover/reality.jpg" },
     { title: "Holly Dolly", singer:"Dolly", src: "album/music/holly-dolly.mp3", cover: "album/cover/holly-dolly.jfif" },
 ];
 const playButton = document.getElementById("play");
@@ -178,25 +178,25 @@ function nextSong() {
     prevSong();
     });
 
-// ------------------------------------------------- AUTO-PLAY ------------------------------------------------------------ 
-let isAutoPlay = true;
+// // ------------------------------------------------- AUTO-PLAY ------------------------------------------------------------ 
+// let isAutoPlay = true;
 
-// Xử lý sự kiện click nút Autoplay
-const autoplayBtn = document.querySelector('#autoplay');
-autoplayBtn.addEventListener('click', function() {
-  isAutoPlay = !isAutoPlay;
-  if (isAutoPlay) {
-    autoplayBtn.textContent = 'Autoplay: On';
-  } else {
-    autoplayBtn.textContent = 'Autoplay: Off';
-  }
-});
+// // Xử lý sự kiện click nút Autoplay
+// const autoplayBtn = document.querySelector('#autoplay');
+// autoplayBtn.addEventListener('click', function() {
+//   isAutoPlay = !isAutoPlay;
+//   if (isAutoPlay) {
+//     autoplayBtn.textContent = 'Autoplay: On';
+//   } else {
+//     autoplayBtn.textContent = 'Autoplay: Off';
+//   }
+// });
 
 // Bắt đầu chuyển bài khi hết bài
 audio.addEventListener('ended', function() {
   nextSong();
 });
 
-// Tắt chức năng autoplay mặc định là Off
-isAutoPlay = false;
-autoplayBtn.textContent = 'Autoplay: Off';
+// // Tắt chức năng autoplay mặc định là Off
+// isAutoPlay = false;
+// autoplayBtn.textContent = 'Autoplay: Off';

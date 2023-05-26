@@ -19,12 +19,12 @@ body {
 
 /* Header styling */
 header {
-    top: 0px;
+    /* top: 0px; */
     background-color: black;
     color: #fff;
     padding: 35px 0;
-    position: sticky;
-    z-index: 999;
+    /* position: sticky;
+    z-index: 999; */
     /* tránh đè content */
 }
 
