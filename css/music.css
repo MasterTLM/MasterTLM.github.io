@@ -1,12 +1,19 @@
+/* .bg{
 
+} */
 .music-player {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-size: 100% 100%;
+    background-image: url(../image/background-musicplayer.png);
+}
+
+.music-player>#title{
+    font-family: sans-serif;
 }
 
 .album-cover {
@@ -50,7 +57,7 @@
 }
 
 button {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
     margin: 20px;
     /* color: #000000; */
     border: none;
@@ -84,9 +91,10 @@ input[type="range"] {
 .song-list {
     max-height: 200px;
     overflow-y: scroll;
-    border: 1px solid #ccc;
+    border: 3px solid #ccc;
     border-radius: 5px;
     padding: 10px;
+    margin-bottom: 30px;
 }
 
 .song {
@@ -144,27 +152,27 @@ input[type="range"] {
     margin-left: 10px;
 }
 
-input#volume{
-    top: 50%;
-    left: 50%;
-    transform: rotate(-90deg);
-    width: 95px;
-    translate: 68% -800%;
-    position: absolute;
+.volume-container{
+position: absolute;
+right: 250px;
 }
 
 input#volume{
-    top: 50%;
-    left: 50%;
+    top: -50%;
+    left: -50%;
     transform: rotate(-90deg);
     width: 95px;
-    translate: 305%;
+    translate: 30% -100%;
     position: absolute;
 }
 
 @media only screen and (max-width: 768px){ /*------ 635px -----*/
+    .volume-container{
+        right: 0;
+        top: 250px;
+    }
     input#volume{
-        translate: 68% -800%;
+        right: 0;
     }
 }
-  
+

@@ -54,9 +54,10 @@
     </header>
 
     <!--============================================ MUSIC PLAYER ===================================================-->
-    <section>
+    <section class="bg">
         <div class="music-player">
             <h1 id="title">Tên bài hát</h1>
+            <h4 id="singer">Ca sĩ</h4>
                     <div class="album-cover">
                         <div class="cd-container">
                             <div class="cd"></div>
@@ -67,27 +68,24 @@
                         <div class="seek-container">
                             <input type="range" min="0" max="100" value="0" class="seek-bar">
                             <span class="time"></span>
-                            <button class="volume-btn" style="margin-left: 7px;"><img src="image/icons/volume.png"></button>
-                            <input id="volume" type="range" min="0" max="1" step="0.1" onchange="changeVolume()" value="1" class="volume-bar" style="transform: rotate(-90deg); width: 95px">
+                            <div class="volume-container">
+                                <button class="volume-btn"><img src="image/icons/volume.png" style="width: 35px;"></button>
+                                <input id="volume" type="range" min="0" max="1" step="0.1" onchange="changeVolume()" value="1" class="volume-bar" style="transform: rotate(-90deg); width: 95px">
+                            </div>
                         </div>
                         <div class="controls">
                             <button id="prev"><img src="image/icons/prev.png"></button>
                             <button id="play" onclick="playPause()"><img src="image/icons/play.png"></button>
                             <button id="next"><img src="image/icons/next.png"></button>
                         </div>
-                    </div>
-                    <!-- Thêm thanh trượt để điều chỉnh bài hát và hiển thị thời gian của bài hát -->
-                    <div class="controls">
-                        <button id="loop" onclick="toggleLoop()"><img src="image/icons/loop.png"></button>
-
-                        <!-- Thêm nút volume và thanh trượt âm lượng -->
-                            
+                        <div class="controls">
+                            <button id="loop" onclick="toggleLoop()"><img src="image/icons/loop.png"></button>
                             <button id="autoplay">Autoplay: On</button>
+                        </div>
                     </div>
-
                 </div>
                 <div class="col-6 library">
-                    <h3>My Favorite</h3>
+                    <h2 class="text-center">My Favorite Song</h2>
                     <div class="song-list">
                         <!-- Danh sách bài hát sẽ được thêm vào đây -->
                     </div>

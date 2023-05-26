@@ -1,13 +1,16 @@
 // ------------------------------------------------- PLAY AND PAUSE------------------------------------------------------------
 const audio = document.getElementById("audio");
+const cover = document.getElementById("cover");
 function playPause() {
     const playButton = document.getElementById("play");
     if (audio.paused) {
         audio.play();
+        cover.style.animationPlayState = "running";
         playButton.innerHTML = "<img src='image/icons/pause.png'>";
     } else {
         audio.pause();
         playButton.innerHTML = "<img src='image/icons/play.png'>";
+        cover.style.animationPlayState = "paused";
     }
 };
 // ------------------------------------------------- LOOP------------------------------------------------------------
@@ -55,10 +58,18 @@ function changeVolume() {
 // ------------------------------------------------- MY FAVORITE------------------------------------------------------------
 // Thêm mảng chứa thông tin về các bài hát trong thư viện
 const songs = [
-    { title: "Cơn mưa ngang qua", src: "album/music/con-mua-ngang-qua.mp3", cover: "album/cover/con-mua-ngang-qua.jpg" },
-    { title: "Way Back Home", src: "album/music/way-back-home.mp3", cover: "album/cover/way-back-home.jpg" },
-    { title: "Run Free", src: "album/music/run-free.mp3", cover: "album/cover/run-free.jpg" },
-    { title: "The River", src: "album/music/the-river.mp3", cover: "album/cover/the-river.jpg" },
+    { title: "Cơn Mưa Ngang Qua", singer:"Sơn Tùng M-TP", src: "album/music/con-mua-ngang-qua.mp3", cover: "album/cover/con-mua-ngang-qua.jpg" },
+    { title: "Way Back Home", singer:"Huy Vạc, Freak", src: "album/music/way-back-home.mp3", cover: "album/cover/way-back-home.jpg" },
+    { title: "Run Free", singer:"Deep Chills, IVIE", src: "album/music/run-free.mp3", cover: "album/cover/run-free.jpg" },
+    { title: "The River", singer:"Axel Johansson", src: "album/music/the-river.mp3", cover: "album/cover/the-river.jpg" },
+    { title: "Alone", singer:"Alan Walker & Ava Max", src: "album/music/alone.mp3", cover: "album/cover/alone.jpg" },
+    { title: "Bật Tình Yêu Lên", singer:"Tăng Duy Tân, Hòa Minzy", src: "album/music/bat-tinh-yeu-len.mp3", cover: "album/cover/bat-tinh-yeu-len.jpg" },
+    { title: "LiLy", singer:"Alan Walker, K-391, Emelie Hollow", src: "album/music/lily.mp3", cover: "album/cover/lily.jpg" },
+    { title: "Lost Control", singer:"Alan Walker, Sorana", src: "album/music/lost-control.mp3", cover: "album/cover/lost-control.jfif" },
+    { title: "On My Way", singer:"Alan Walker, Sabrina Carpenter, Farruko", src: "album/music/on-my-way.mp3", cover: "album/cover/on-my-way.jpg" },
+    { title: "That Girl", singer:"Olly  Murs", src: "album/music/that-girl.mp3", cover: "album/cover/that-girl.jpg" },
+    { title: "Reality", singer:"Lost Frequencies, Janieck Devy", src: "album/music/reality.mp3", cover: "album/cover/reality.jpg" },
+    { title: "Holly Dolly", singer:"Dolly", src: "album/music/holly-dolly.mp3", cover: "album/cover/holly-dolly.jfif" },
 ];
 const playButton = document.getElementById("play");
 // Thêm các bài hát vào danh sách trong thư viện
@@ -80,8 +91,11 @@ function playSong(index) {
     document.getElementById("cover").src = songs[index].cover;
     const titleElement = document.getElementById("title");
     titleElement.innerText = songs[index].title;
+    const singerElement = document.getElementById("singer");
+    singerElement.innerText = songs[index].singer;
     audio.play();
     playButton.innerHTML = "<img src='image/icons/pause.png'>";
+    cover.style.animationPlayState = "running";
     currentSongIndex = index;
 };
 
@@ -128,8 +142,11 @@ function nextSong() {
     coverImg.src = nextSong.cover;
     const title = document.querySelector('#title');
     title.textContent = nextSong.title;
+    const singer = document.getElementById("singer");
+    singer.textContent = nextSong.singer;
     audio.play();
     playButton.innerHTML = "<img src='image/icons/pause.png'>";
+    cover.style.animationPlayState = "running";
   }
   
   function prevSong() {
@@ -144,8 +161,11 @@ function nextSong() {
     coverImg.src = prevSong.cover;
     const title = document.querySelector('#title');
     title.textContent = prevSong.title;
+    const singer = document.getElementById("singer");
+    singer.textContent = prevSong.singer;
     audio.play();
     playButton.innerHTML = "<img src='image/icons/pause.png'>";
+    cover.style.animationPlayState = "running";
   }
 
     const nextBtn = document.querySelector('#next');
