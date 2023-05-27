@@ -201,10 +201,6 @@ const app = {
       const seekTime = (audio.duration / 100) * e.target.value;
       audio.currentTime = seekTime;
     };
-    time.onchange = function (e) {
-      const seekTime = (audio.duration / 100) * e.target.value;
-      audio.currentTime = seekTime;
-    };
     
     audio.addEventListener("timeupdate", () => {
       const currentMinutes = Math.floor(audio.currentTime / 60);

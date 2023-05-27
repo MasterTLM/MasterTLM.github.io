@@ -120,6 +120,11 @@
     transition: opacity 0.2s;
   }
   
+#time{
+  position: absolute;
+    right: 20px;
+}
+  
   .progress::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -192,5 +197,8 @@
     .progress {
       width: 75%;
     }
+    .playlist {
+      margin-top: 347px;
+  }
 }
 
