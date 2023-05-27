@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music App - </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/bootstrap-5.3.0-alpha3-dist/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/owner.css">
     <link rel="stylesheet" href="css/music_app.css">
 </head>
 <body>
@@ -15,7 +18,7 @@
   <!-- Dashboard -->
   <div class="dashboard">
     <!-- Header -->
-    <header>
+    <header style="background-color: white !important; padding: 0;">
       <h4>Now playing:</h4>
       <h2>Song Name</h2>
     </header>
@@ -47,7 +50,7 @@
     </div>
     <div class="seek-container">
         <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
-        <span id="time"></span>
+        <span id="time">0:00 / 0:00</span>
     </div>
     <audio id="audio" src=""></audio>
   </div>
@@ -56,7 +59,15 @@
   <div class="playlist">
   </div>
 </div>
-
+<!--============================================ FOOTER ===================================================-->
+<footer class="site-footer">
+  <div class="row">
+      <a href="https://mastertlm.github.io/owner.html" class="btn-footer col-3" type ="button"><i class="fa-solid fa-house"></i></a>
+      <a href="https://mastertlm.github.io/music.html" class="btn-target col-3" type ="button"><i class="fa-solid fa-headphones"></i></a>
+      <a href="#" class="btn-footer col-3" type ="button"><i class="fa-solid fa-folder-closed"></i></a>
+      <a href="#" class="btn-footer col-3" type ="button"><i class="fa-solid fa-heart-pulse"></i></a>
+  </div>
+</footer>
 <script src="js/music_app.js"></script>
 </body>
 </html>

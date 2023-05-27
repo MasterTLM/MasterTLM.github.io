@@ -109,7 +109,8 @@
   }
   
   .progress {
-    width: 100%;
+    width: 80%;
+    display: inline;
     -webkit-appearance: none;
     height: 6px;
     background: #d3d3d3;
@@ -187,3 +188,9 @@
     font-size: 18px;
   }
   
+  @media screen and (max-width: 768px){ /*------ 635px -----*/
+    .progress {
+      width: 75%;
+    }
+}
+

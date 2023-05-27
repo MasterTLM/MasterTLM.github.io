@@ -14,6 +14,7 @@ const cdThumb = $(".cd-thumb");
 const audio = $("#audio");
 const playBtn = $(".btn-toggle-play");
 const progress = $("#progress");
+const time = $("#time");
 const prevBtn = $(".btn-prev");
 const nextBtn = $(".btn-next");
 const randomBtn = $(".btn-random");
@@ -200,7 +201,26 @@ const app = {
       const seekTime = (audio.duration / 100) * e.target.value;
       audio.currentTime = seekTime;
     };
-
+    time.onchange = function (e) {
+      const seekTime = (audio.duration / 100) * e.target.value;
+      audio.currentTime = seekTime;
+    };
+    
+    audio.addEventListener("timeupdate", () => {
+      const currentMinutes = Math.floor(audio.currentTime / 60);
+      let currentSeconds = Math.floor(audio.currentTime % 60);
+      if (currentSeconds < 10) {
+          currentSeconds = `0${currentSeconds}`;
+      }
+  
+      const durationMinutes = Math.floor(audio.duration / 60);
+      let durationSeconds = Math.floor(audio.duration % 60);
+      if (durationSeconds < 10) {
+          durationSeconds = `0${durationSeconds}`;
+      }
+  
+      time.textContent = `${currentMinutes}:${currentSeconds} / ${durationMinutes}:${durationSeconds}`;
+    });
     // Khi next song
     // When next song
     nextBtn.onclick = function () {
