@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Owner</title>
+    <title id="title">Chill out</title>
     <link rel="shortcut icon" href="image/icons/favicon.ico" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap-5.3.0-alpha3-dist/bootstrap.min.css">
@@ -56,15 +56,16 @@
     <!--============================================ MUSIC PLAYER ===================================================-->
     <section class="bg">
         <div class="music-player">
-            <h1 id="title">Tên bài hát</h1>
-            <h4 id="singer">Ca sĩ</h4>
+            <h1 id="title-music">Reality</h1>
+            <h4 id="singer">Lost Frequencies, Janieck Devy</h4>
                     <div class="album-cover">
                         <div class="cd-container">
                             <div class="cd"></div>
-                                <img src="image/music-start.jpg" alt="Album Cover" id="cover">
+                                <img src="album/cover/reality.jpg" alt="Album Cover" id="cover">
+                                <!-- <img src="image/music-start.jpg" alt="Album Cover" id="cover"> -->
                             </div>
                         </div>
-                        <audio id="audio"></audio>
+                        <audio id="audio" src="album/music/reality.mp3"></audio>
                         <div class="seek-container">
                             <input type="range" min="0" max="100" value="0" class="seek-bar">
                             <span class="time"></span>

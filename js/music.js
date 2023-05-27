@@ -48,10 +48,10 @@ function changeVolume() {
   // Kiểm tra giá trị của thanh trượt âm lượng
   if (volumeSlider.value == 0) {
     // Nếu giá trị là 0, đổi tên nút volume thành "Silent"
-    volumeBtn.innerHTML = "<img src='image/icons/mute.png'>";
+    volumeBtn.innerHTML = "<img src='image/icons/mute.png' style='width: 35px;'>";
   } else {
     // Nếu giá trị khác 0, đổi tên nút volume thành "Volume"
-    volumeBtn.innerHTML = "<img src='image/icons/volume.png'>";
+    volumeBtn.innerHTML = "<img src='image/icons/volume.png' style='width: 35px;'>";
   }
 }
 
@@ -80,17 +80,18 @@ let currentSongIndex = -1;
 songs.forEach((song, index) => {
     const songElement = document.createElement("div");
     songElement.classList.add("song");
-    songElement.textContent = song.title;
+    songElement.textContent = song.title + " - " + song.singer;
     songElement.addEventListener("click", () => playSong(index));
     songList.appendChild(songElement);
 });
 
 function playSong(index) {
-    const position = index;
     audio.src = songs[index].src;
     document.getElementById("cover").src = songs[index].cover;
     const titleElement = document.getElementById("title");
-    titleElement.innerText = songs[index].title;
+    titleElement.innerText = "Chill out - " + songs[index].title;
+    const titlemusicElement = document.getElementById("title-music");
+    titlemusicElement.innerText = songs[index].title;
     const singerElement = document.getElementById("singer");
     singerElement.innerText = songs[index].singer;
     audio.play();
@@ -141,7 +142,9 @@ function nextSong() {
     const coverImg = document.querySelector('#cover');
     coverImg.src = nextSong.cover;
     const title = document.querySelector('#title');
-    title.textContent = nextSong.title;
+    title.textContent = "Chill out - " + nextSong.title;
+    const titlemusic = document.querySelector('#title-music');
+    titlemusic.textContent = nextSong.title;
     const singer = document.getElementById("singer");
     singer.textContent = nextSong.singer;
     audio.play();
@@ -160,7 +163,9 @@ function nextSong() {
     const coverImg = document.querySelector('#cover');
     coverImg.src = prevSong.cover;
     const title = document.querySelector('#title');
-    title.textContent = prevSong.title;
+    title.textContent = "Chill out - " + prevSong.title;
+    const titlemusic = document.querySelector('#title-music');
+    titlemusic.textContent = prevSong.title;
     const singer = document.getElementById("singer");
     singer.textContent = prevSong.singer;
     audio.play();
@@ -200,3 +205,5 @@ audio.addEventListener('ended', function() {
 // // Tắt chức năng autoplay mặc định là Off
 // isAutoPlay = false;
 // autoplayBtn.textContent = 'Autoplay: Off';
+
+// ----------------------------------------------- SEARRCH -------------------------------------------------------------
