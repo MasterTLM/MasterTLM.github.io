@@ -80,7 +80,7 @@ let currentSongIndex = -1;
 songs.forEach((song, index) => {
     const songElement = document.createElement("div");
     songElement.classList.add("song");
-    songElement.textContent = song.title + " - " + song.singer;
+    songElement.innerHTML = song.title + " - " + song.singer + "<div class='now-playing'></div>";
     songElement.addEventListener("click", () => playSong(index));
     songList.appendChild(songElement);
 });
